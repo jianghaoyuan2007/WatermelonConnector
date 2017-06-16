@@ -34,6 +34,11 @@ after_failure:
  - cat -n ~/Library/Logs/scan/*
  - cat -n $TMPDIR/com.apple.dt.XCTest-status/Session*.log
  - cat -n ~/Library/Logs/DiagnosticReports/xctest*.crash
+
+addons:
+  ssh_known_hosts:
+  - github.com
+  - 192.30.253.112
 # deploy:
 #   provider: script
 #   script: fastlane complete_framework_release --env deploy

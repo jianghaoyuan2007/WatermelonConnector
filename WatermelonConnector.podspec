@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "WatermelonConnector"
   s.version      = "0.0.1"
-  s.summary      = "A short description of WatermelonConnector."
+  s.summary      = "This is a WatermelonConnector framework."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                    This is a part of the SuperMakert project.
                    DESC
 
   s.homepage     = "https://github.com/jianghaoyuan2007/WatermelonConnector"
@@ -130,9 +131,10 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-
+  s.dependency "CTMediator"
+  s.dependency "Watermelon"
 end
