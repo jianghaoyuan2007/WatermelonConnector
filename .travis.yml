@@ -22,8 +22,6 @@ before_install:
   - gem install bundler --no-rdoc --no-ri --no-document --quiet
   - gem install fastlane --no-rdoc --no-ri --no-document --quiet
   - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
-before_script:
-  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config  
 script:
   - set -o pipefail
   - fastlane $FASTLANE_LANE configuration:Debug --env $FASTLANE_ENV
@@ -36,6 +34,11 @@ after_failure:
  - cat -n ~/Library/Logs/scan/*
  - cat -n $TMPDIR/com.apple.dt.XCTest-status/Session*.log
  - cat -n ~/Library/Logs/DiagnosticReports/xctest*.crash
+
+addons:
+  ssh_known_hosts:
+  - github.com
+  - 192.30.253.112
 # deploy:
 #   provider: script
 #   script: fastlane complete_framework_release --env deploy
