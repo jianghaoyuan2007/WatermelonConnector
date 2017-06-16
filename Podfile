@@ -8,7 +8,8 @@ target 'WatermelonConnector' do
   # use_frameworks!
 
   # Pods for WatermelonConnector
-
+  pod 'CTMediator', '~> 6'
+  pod 'Watermelon'
   target 'WatermelonConnectorTests' do
     inherit! :search_paths
     # Pods for testing

@@ -1,12 +1,21 @@
 PODS:
+  - CTMediator (6)
   - Kiwi (2.4.0)
+  - Masonry (1.0.2)
+  - Watermelon (0.1.0):
+    - Masonry (~> 1.0.2)
 
 DEPENDENCIES:
+  - CTMediator (~> 6)
   - Kiwi (~> 2.4.0)
+  - Watermelon
 
 SPEC CHECKSUMS:
+  CTMediator: 334b9eaab167dc41868106b380a2a99fddd26e48
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Watermelon: de49ef8eae43425a623730a0cb73e8056c5a3aa0
 
-PODFILE CHECKSUM: 33851dba9c1aa133d45825f37754a086e02117e1
+PODFILE CHECKSUM: 98c966b469a8949df5a3fc354f379bb5278c280a
 
 COCOAPODS: 1.2.1
