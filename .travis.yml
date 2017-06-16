@@ -22,6 +22,8 @@ before_install:
   - gem install bundler --no-rdoc --no-ri --no-document --quiet
   - gem install fastlane --no-rdoc --no-ri --no-document --quiet
   - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+before_script:
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config  
 script:
   - set -o pipefail
   - fastlane $FASTLANE_LANE configuration:Debug --env $FASTLANE_ENV
